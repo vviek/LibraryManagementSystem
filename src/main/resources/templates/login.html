@@ -4,12 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glassmorphism Login Form | CodingNepal</title>
-  <link rel="stylesheet" href="loginstyle.css">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/loginstyle.css">
 </head>
 <body>
+
   <div class="wrapper">
-    <form action="#">
+    <form 
+	method="post"
+	role="form"
+	th:action="@{/login}"
+	>
       <h2>Login</h2>
 	  
         <div class="input-field">
@@ -25,11 +30,11 @@
           <input type="checkbox" id="remember">
           <p>Remember me</p>
         </label>
-        <a href="#">Forgot password?</a>
+        <a href="/forgot">Forgot password?</a>
       </div>
       <button type="submit">Log In</button>
       <div class="register">
-        <p>Don't have an account? <a href="#">Register</a></p>
+        <p>Don't have an account? <a href="/register">Register</a></p>
       </div>
     </form>
   </div>

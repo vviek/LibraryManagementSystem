@@ -26,4 +26,9 @@ public class LoginController {
 	public String showRegister() {
 		return "register";
 	}
+	
+	@GetMapping("/forgot")
+	public String forgotPassword() {
+		return "forgot";
+	}
 }
