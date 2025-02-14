@@ -5,34 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
-  <link rel="stylesheet" href="css/loginstyle.css">
+  <link rel="stylesheet" href="css/loginstyle.css"/>
+  <script src="js/register/manage.js"></script>
+  
 </head>
 <body>
   <div class="wrapper">
     <form action="#">
       <h2>Register</h2>
         <div class="input-field">
-        <input type="text" required>
+        <input type="text" id="password" name="password" required>
         <label>Enter your name</label>
       </div>
 	  
 	    <div class="input-field">
-	     <input type="text" required>
+	     <input type="text" id="email" name="email" required>
 	     <label>Enter your email</label>
 	    </div>
 		
-	   <div class="input-field">
-		  <input type="text" required>
+	   <!--<div class="input-field">
 		  <label>Enter your role</label>
 		</div>
+		-->
 			
       <div class="input-field">
-        <input type="password" required>
+        <input type="password" id="password" name="password" required>
         <label>Enter your password</label>
       </div>
 	  
 	  <div class="input-field">
-	     <input type="text" required>
+	     <input type="text" onblur="checkConfirmPassword()" id="confirmpassword" name="confirmpassword" required>
 	     <label>Confirm password</label>
 	  </div>
 			

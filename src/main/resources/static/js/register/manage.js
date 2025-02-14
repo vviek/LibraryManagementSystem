@@ -1,0 +1,5 @@
+function checkConfirmPassword()
+{
+	alert("sds");
+	
+}
