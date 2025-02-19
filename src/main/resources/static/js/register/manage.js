@@ -1,3 +1,4 @@
+
 function checkUsername()
 {
 	
@@ -34,18 +35,17 @@ function checkEmailValidation()
 
 function checkPassword()
 {
-	var password=document.getElementById('password').value;
 	
-	if(password.length > 0)
-		{
-		}
-	if(password.length>6){
-			alert("Password should be atleast 6 digit")
-		}
-		else{
-			alert("Password cannot be blank");
-		}
-}
+	const toastLiveExample = document.getElementById('liveToast')
+
+	
+	  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+	 
+	  toastBootstrap.show()
+	
+
+	
+	}
 
 function checkConfirmPassword()
 {
@@ -55,8 +55,8 @@ function checkConfirmPassword()
 			{
 			}
 			else{
-						alert("Password cannot be blank");
-					}
+						alert("Confirm Password cannot be blank");
+				}
 }
 
 function checkAllValidation()
