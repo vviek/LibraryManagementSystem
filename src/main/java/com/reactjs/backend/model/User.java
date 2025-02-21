@@ -25,7 +25,10 @@ public class User {
 	private String email;
 
 	private String username;
-
+	private String userImageName;
+	private String gender;
+	private String country;
+	private String languages;	
 	private String password;
 
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -38,6 +41,38 @@ public class User {
 
 	public Integer getId() {
 		return id;
+	}
+
+	public String getUserImageName() {
+		return userImageName;
+	}
+
+	public void setUserImageName(String userImageName) {
+		this.userImageName = userImageName;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getLanguages() {
+		return languages;
+	}
+
+	public void setLanguages(String languages) {
+		this.languages = languages;
 	}
 
 	public void setId(Integer id) {
