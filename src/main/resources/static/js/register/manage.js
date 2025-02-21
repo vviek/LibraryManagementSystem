@@ -1,9 +1,6 @@
 
 function checkUsername()
 {
-	
-	
-	
 	var userName=document.getElementById('name').value;
 	
 	   if(userName.length > 0)
@@ -11,16 +8,18 @@ function checkUsername()
 			
 		}else{
 			
-			alert("Username cannot be blank.");
+			const toastLiveExample = document.getElementById('liveToast')
+
+				
+				  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+				 
+				  toastBootstrap.show()
 		}
 	
 }
 
 function checkEmailValidation()
 {
-	
-	
-	
 	var emailAddress=document.getElementById('email').value;
 	
 	if(emailAddress.length > 0)
@@ -28,7 +27,12 @@ function checkEmailValidation()
 			
 		}else{
 			
-			alert("Email cannot be blank.");
+			const toastLiveExample = document.getElementById('liveToast')
+
+				
+				  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+				 
+				  toastBootstrap.show()
 		}
 	
 }
@@ -49,14 +53,12 @@ function checkPassword()
 
 function checkConfirmPassword()
 {
-	var password=document.getElementById('confirmpassword').value;
+	const toastLiveExample = document.getElementById('liveToast')
+
 		
-		if(password.length > 0)
-			{
-			}
-			else{
-						alert("Confirm Password cannot be blank");
-				}
+		  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+		 
+		  toastBootstrap.show()
 }
 
 function checkAllValidation()
