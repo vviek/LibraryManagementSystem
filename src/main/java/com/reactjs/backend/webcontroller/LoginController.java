@@ -27,6 +27,12 @@ public class LoginController {
 		return "register";
 	}
 	
+	@GetMapping("/register-old")
+	public String showOldRegister() {
+		return "register_copy";
+	}
+	
+	
 	@GetMapping("/forgot")
 	public String forgotPassword() {
 		return "forgot";

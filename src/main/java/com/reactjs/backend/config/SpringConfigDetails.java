@@ -26,7 +26,7 @@ public class SpringConfigDetails {
 		
 		return security.csrf(csrf -> csrf.disable())
 				.authorizeHttpRequests(auth -> auth
-						 .requestMatchers("/register","/saveemployee","/css/**","/images/**","/js/**").permitAll().anyRequest().authenticated())
+						 .requestMatchers("/register","/register-old","/saveemployee","/css/**","/images/**","/js/**").permitAll().anyRequest().authenticated())
 				
 				
 				.formLogin(login -> login.loginPage("/login").loginProcessingUrl("/login").defaultSuccessUrl("/home")
