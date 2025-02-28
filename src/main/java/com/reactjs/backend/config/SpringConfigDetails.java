@@ -15,6 +15,9 @@ public class SpringConfigDetails {
 
 	@Bean
 	public PasswordEncoder passwordEncoderData() {
+		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String hashedPassword = passwordEncoder.encode("base");
+		System.out.println(hashedPassword );
 		
 		return new BCryptPasswordEncoder();
 	}

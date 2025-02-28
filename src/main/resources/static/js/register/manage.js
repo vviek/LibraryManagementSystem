@@ -20,21 +20,15 @@ function checkUsername()
 
 function checkEmailValidation()
 {
+	
+	
 	var emailAddress=document.getElementById('email').value;
-	
-	if(emailAddress.length > 0)
-		{
+		
+		$.ajax({url: "http://localhost:8080/test/alladdress/"+emailAddress, success: function(result){
 			
-		}else{
-			
-			const toastLiveExample = document.getElementById('liveToast')
-
-				
-				  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-				 
-				  toastBootstrap.show()
-		}
-	
+		    alert(result)
+			 
+		   }});	
 }
 
 function checkPassword()
@@ -61,11 +55,15 @@ function checkConfirmPassword()
 		  toastBootstrap.show()
 }
 
+
 function checkAllValidation()
 {
 	
 	
-	var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'), {
+	
+	
+	
+	/*var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'), {
 	  keyboard: true
 	});
 	
@@ -101,14 +99,8 @@ function checkAllValidation()
 								myModal.show();	
 								
 								return;
-             }
+             }*/
 			 
-			 /**	
-		var confirmPasswordData=document.getElementById('confirmpassword').value;
-						
-		if(confirmPasswordData.length==0)
-			{
-				alert("Password cannot be blank.");
-			}*/
+		
 }
 
