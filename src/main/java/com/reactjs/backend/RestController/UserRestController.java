@@ -35,7 +35,7 @@ public class UserRestController {
 			
 		}else {
 			ResponseData obj=new ResponseData(false, "Email Addreess not found", "");
-			return ResponseEntity.ok(obj);	
+			return ResponseEntity.ok(obj);
 		}
 	}
 

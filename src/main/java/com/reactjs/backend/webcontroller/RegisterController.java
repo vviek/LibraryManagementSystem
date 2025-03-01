@@ -1,8 +1,11 @@
 package com.reactjs.backend.webcontroller;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.reactjs.backend.Service.AppServiceData;
 import com.reactjs.backend.Service.CustomUserService;
 import com.reactjs.backend.model.User;
 
@@ -21,7 +25,8 @@ public class RegisterController {
 
 	@Autowired
 	private CustomUserService userServiceData;
-
+	@Autowired
+	AppServiceData appServiceData;
 	@GetMapping("/save-register")
 	public String showHome(@RequestPart("userImagefile") MultipartFile file,User userData, Model modelobj) {
 		
@@ -43,7 +48,6 @@ public class RegisterController {
 		userData.setUserImageName(fileName);
 		boolean isDataSaved;
 		isDataSaved = userServiceData.SaveUserData(userData);
-
 		if (isDataSaved) {
 			modelobj.addAttribute("message", "Registered successfully, Please Login in");
 			return "login";
@@ -52,6 +56,14 @@ public class RegisterController {
 			return "register";
 		}
 
+	}
+	@GetMapping("/allusers")
+	public String getAllEmployee(Model modelObj){
+		
+		List<User> userList=new ArrayList<>();
+		userList = appServiceData.GetAllusers();
+		modelObj.addAttribute("userData",userList );
+		return "user-view/user-list-view";
 	}
 
 

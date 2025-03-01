@@ -27,6 +27,11 @@ public class LoginController {
 		return "register";
 	}
 	
+	@GetMapping("/user-list")
+	public String userListData() {
+		return "user-data-view";
+	}
+	
 	@GetMapping("/register-old")
 	public String showOldRegister() {
 		return "register_copy";
@@ -35,6 +40,7 @@ public class LoginController {
 	
 	@GetMapping("/forgot")
 	public String forgotPassword() {
+		
 		return "forgot";
 	}
 }
