@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.Backend.model.Employee;
 import com.reactjs.backend.Repository.UserDataRepository;
 import com.reactjs.backend.model.User;
 
@@ -51,4 +50,11 @@ public Boolean SaveUserData(User userData) {
 		return true;
 	}
 	*/
+
+public Boolean deleteUserId(Long userId) {
+	
+	userDataRepository.deleteById(userId);
+	
+	return true;
+}
 }

@@ -72,7 +72,7 @@ public class UserRestController {
 		
 		Boolean isUserDataDeleted;
 		
-		isUserDataDeleted= appServiceData.DeleteUserId(userId);
+		isUserDataDeleted= appServiceData.deleteUserId(userId);
 		
 		return  ResponseEntity.ok(isUserDataDeleted);
 	}
