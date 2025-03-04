@@ -13,6 +13,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 public class SpringConfigDetails {
 
+	//Changes password into hash format
 	@Bean
 	public PasswordEncoder passwordEncoderData() {
 		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -27,6 +28,8 @@ public class SpringConfigDetails {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity security) throws Exception {
 		
+		
+		//Url which we are using in this we can hit these urls without login into our application
 		return security.csrf(csrf -> csrf.disable())
 				.authorizeHttpRequests(auth -> auth
 						 .requestMatchers("/user-list","/register/view/**","/register","/home","/register-old","/saveemployee","/css/**","/images/**","/js/**","/test/**").permitAll().anyRequest().authenticated())
@@ -39,6 +42,7 @@ public class SpringConfigDetails {
 		
 	}
 
+	//We can use these functionality of authentication by using this method
 	@Bean
 	public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
 		return configuration.getAuthenticationManager();

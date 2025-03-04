@@ -16,7 +16,6 @@ import com.reactjs.backend.model.User;
 
 @Service
 public class CustomUserService implements UserDetailsService {
-
 	@Autowired
 	private UserDataRepository userRepository;
 

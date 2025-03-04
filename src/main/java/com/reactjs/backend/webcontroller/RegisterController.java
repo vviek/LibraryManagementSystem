@@ -28,6 +28,8 @@ public class RegisterController {
 	@Autowired
 	AppServiceData appServiceData;
 	@GetMapping("/save-register")
+	
+	//Request part is used to take the image from html file
 	public String showHome(@RequestPart("userImagefile") MultipartFile file,User userData, Model modelobj) {
 		
 		String fileName = file.getOriginalFilename();

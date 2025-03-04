@@ -6,6 +6,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
+//Use this for creating table in database
+
+//Entity is spring annotation
 @Entity
 @Table(name= "roles")
 public class Role {

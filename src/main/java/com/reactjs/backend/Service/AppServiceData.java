@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.reactjs.backend.Repository.UserDataRepository;
 import com.reactjs.backend.model.User;
 
+
+//Used to write business logic
 @Service
 public class AppServiceData {
 

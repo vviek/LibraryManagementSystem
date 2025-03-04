@@ -17,13 +17,21 @@ import com.reactjs.backend.Service.AppServiceData;
 import com.reactjs.backend.model.ResponseData;
 import com.reactjs.backend.model.User;
 
+
+//We can see the data of rest controller in json format
 @RestController
 @RequestMapping("/test")
 public class UserRestController {
+	
+	//Autowired is short form of creating object without using new keyboard
 	@Autowired
 	AppServiceData appServiceData;
 
+	
+	//In this we see which url shows the data of it's corresponding data
 	@GetMapping("/alladdress/{emailId}")
+	
+	//We use path variable annotation to see the specific data which is given in url
 	public ResponseEntity<ResponseData> getAllAddress(@PathVariable("emailId") String emailId) {
 		
 		
@@ -57,6 +65,8 @@ public class UserRestController {
 		return ResponseEntity.ok(userData);
 	}
 	
+	
+	//Request body is used to take large input in json format
 	@PostMapping("/saveemployee")
 	public Boolean saveemployeeData(@RequestBody User UserNew) 
 	{

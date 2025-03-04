@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.reactjs.backend.Service.AppServiceData;
 
+// To redirect the page to html page through urls
 @Controller
 public class LoginController {
 
@@ -43,4 +44,7 @@ public class LoginController {
 		
 		return "forgot";
 	}
+	
+	//Difference between the controller and rest controller
+	//Controller is used to redirect the the page to html page through the urls and rest controller is used to check api through api and take the data in json format
 }
