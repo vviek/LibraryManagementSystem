@@ -32,7 +32,7 @@ public class SpringConfigDetails {
 		//Url which we are using in this we can hit these urls without login into our application
 		return security.csrf(csrf -> csrf.disable())
 				.authorizeHttpRequests(auth -> auth
-						 .requestMatchers("/user-list","/register/view/**","/register","/home","/register-old","/saveemployee","/css/**","/images/**","/js/**","/test/**").permitAll().anyRequest().authenticated())
+						 .requestMatchers("/user-list","/userhome","/register/view/**","/register","/home","/register-old","/saveemployee","/css/**","/images/**","/js/**","/test/**").permitAll().anyRequest().authenticated())
 				
 				
 				.formLogin(login -> login.loginPage("/login").loginProcessingUrl("/login").defaultSuccessUrl("/home")
