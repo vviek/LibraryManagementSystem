@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/loginstyle.css"/>
+</head>
+<body>
+
+  <div class="wrapper">
+	<div th:if="${param.error}">
+	                <div class="alert alert-danger">Invalid Email or Password</div>
+	            </div>
+	            <div th:if="${param.logout}">
+	                <div class="alert alert-success"> You have been logged out.</div>
+	            </div>
+
+    <form 
+	method="post"
+	role="form"
+	th:action="@{/login}"
+	>
+      <h2>Login</h2>
+	  
+        <div class="input-field">
+        <input type="text" 			id="username"
+			                                 name="username" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" 		id="password"
+		                                  name="password" required>
+        <label>Enter your password</label>
+      </div>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Remember me</p>
+        </label>
+        <a href="/forgot">Forgot password?</a>
+      </div>
+      <button type="submit">Log In</button>
+      <div class="register">
+        <p>Don't have an account? <a href="/register">Register</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+

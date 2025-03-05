@@ -47,7 +47,7 @@ public class LoginController {
 	
 	@GetMapping("/userhome")
 	public String userHomePage() {
-		return "user_home";
+		return "index";
 	}
 	//Difference between the controller and rest controller
 	//Controller is used to redirect the the page to html page through the urls and rest controller is used to check api through api and take the data in json format
