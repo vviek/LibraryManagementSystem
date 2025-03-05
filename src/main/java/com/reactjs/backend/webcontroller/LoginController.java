@@ -49,6 +49,13 @@ public class LoginController {
 	public String userHomePage() {
 		return "index";
 	}
+	
+	
+	//This code is used when we are using a file under certain folder
+		/*@GetMapping("/demo")
+		public String demo() {
+			return "demo1/demo";
+		}*/
 	//Difference between the controller and rest controller
 	//Controller is used to redirect the the page to html page through the urls and rest controller is used to check api through api and take the data in json format
 }
